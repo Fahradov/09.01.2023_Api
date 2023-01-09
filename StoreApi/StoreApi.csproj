@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.12">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Admin\" />
+    <None Remove="Admin\Controllers\" />
+    <None Remove="Admin\Dtos\" />
+    <None Remove="Admin\Dtos\CategoryDtos\" />
+    <None Remove="FluentValidation.AspNetCore" />
+    <None Remove="Admin\Dtos\ProductDtos\" />
+    <None Remove="Admin\Profiles\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Admin\Dtos\AccountDtos\" />
+    <None Remove="Client\" />
+    <None Remove="Client\Controllers\" />
+    <None Remove="Client\Dtos\" />
+    <None Remove="Client\Profiles\" />
+    <None Remove="Client\Dtos\CategoryDtos\" />
+    <None Remove="Client\Dtos\ProductDtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+    <Folder Include="Admin\Controllers\" />
+    <Folder Include="Admin\Dtos\" />
+    <Folder Include="Admin\Dtos\CategoryDtos\" />
+    <Folder Include="Admin\Dtos\ProductDtos\" />
+    <Folder Include="Admin\Profiles\" />
+    <Folder Include="Admin\Dtos\AccountDtos\" />
+    <Folder Include="Client\" />
+    <Folder Include="Client\Controllers\" />
+    <Folder Include="Client\Dtos\" />
+    <Folder Include="Client\Profiles\" />
+    <Folder Include="Client\Dtos\CategoryDtos\" />
+    <Folder Include="Client\Dtos\ProductDtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Store.Data\Store.Data.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

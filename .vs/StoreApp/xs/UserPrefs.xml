@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{3B8FAA9B-D04A-41F2-98E1-546B16EFA302}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="StoreApi/Client/Profiles/ClientMapper.cs">
+    <Files>
+      <File FileName="StoreApi/Client/Controllers/ClientCategoriesController.cs" Line="26" Column="28" />
+      <File FileName="StoreApi/Client/Controllers/ClientProductsController.cs" Line="34" Column="35" />
+      <File FileName="StoreApi/Client/Profiles/ClientMapper.cs" Line="24" Column="1" />
+      <File FileName="StoreApi/Admin/Controllers/CategoriesController.cs" Line="36" Column="25" />
+      <File FileName="StoreApi/Admin/Profiles/AdminMapper.cs" Line="16" Column="56" />
+      <File FileName="StoreApi/Admin/Dtos/CategoryDtos/CategoryDetailDto.cs" Line="5" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StoreApp" expanded="True">
+            <Node name="Store.Data" expanded="True">
+              <Node name="Configurations" expanded="True" />
+              <Node name="DAL" expanded="True" />
+            </Node>
+            <Node name="StoreApi" expanded="True">
+              <Node name="Admin" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Dtos" expanded="True">
+                  <Node name="CategoryDtos" expanded="True" />
+                </Node>
+                <Node name="Profiles" expanded="True" />
+              </Node>
+              <Node name="Client" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Dtos" expanded="True" />
+                <Node name="Profiles" expanded="True">
+                  <Node name="ClientMapper.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.StoreApi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+</Properties>

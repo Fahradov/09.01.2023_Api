@@ -1,0 +1,17 @@
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/bin/Debug/net6.0/Store.Data.deps.json
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/bin/Debug/net6.0/Store.Data.runtimeconfig.json
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/bin/Debug/net6.0/Store.Data.dll
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/bin/Debug/net6.0/Store.Data.pdb
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/bin/Debug/net6.0/Store.Core.dll
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/bin/Debug/net6.0/Store.Core.pdb
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/Store.Data.csproj.AssemblyReference.cache
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/Store.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/Store.Data.AssemblyInfoInputs.cache
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/Store.Data.AssemblyInfo.cs
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/Store.Data.csproj.CoreCompileInputs.cache
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/Store.Data.csproj.CopyComplete
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/Store.Data.dll
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/refint/Store.Data.dll
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/Store.Data.pdb
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/Store.Data.genruntimeconfig.cache
+/Users/seymurfahradov/Desktop/StoreApp/Store.Data/obj/Debug/net6.0/ref/Store.Data.dll

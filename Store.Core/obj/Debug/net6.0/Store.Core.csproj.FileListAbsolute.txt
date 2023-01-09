@@ -1,0 +1,12 @@
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/bin/Debug/net6.0/Store.Core.deps.json
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/bin/Debug/net6.0/Store.Core.dll
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/bin/Debug/net6.0/Store.Core.pdb
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/obj/Debug/net6.0/Store.Core.csproj.AssemblyReference.cache
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/obj/Debug/net6.0/Store.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/obj/Debug/net6.0/Store.Core.AssemblyInfoInputs.cache
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/obj/Debug/net6.0/Store.Core.AssemblyInfo.cs
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/obj/Debug/net6.0/Store.Core.csproj.CoreCompileInputs.cache
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/obj/Debug/net6.0/Store.Core.dll
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/obj/Debug/net6.0/refint/Store.Core.dll
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/obj/Debug/net6.0/Store.Core.pdb
+/Users/seymurfahradov/Desktop/StoreApp/Store.Core/obj/Debug/net6.0/ref/Store.Core.dll
