@@ -12,13 +12,14 @@ using StoreApi.Client.Dtos.ProductDtos;
 
 namespace StoreApi.Client.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName = "users")]
+    [Route("api/users/[controller]")]
     [ApiController]
-    public class ClientProductsController : Controller
+    public class ProductsController : Controller
     {
         private readonly StoreDbContext _context;
         private readonly IMapper _mapper;
-        public ClientProductsController(StoreDbContext context, IMapper mapper)
+        public ProductsController(StoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Store.Core.Entities;
 using Store.Data.DAL;
@@ -12,7 +14,9 @@ using StoreApi.Admin.Dtos.CategoryDtos;
 
 namespace StoreApi.Admin.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName = "admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
+    [Route("api/admin/[controller]")]
     [ApiController]
     public class CategoriesController : Controller
     {

@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "vxc/I2j0I6jp+6tSSI2dpefdZwDrxqNuCsNhOKvXzm0=",
+  "Hash": "L/a67+sF32LC0a479nNOZ5CVmVRcjbjesG6kMHPAj98=",
   "Source": "StoreApi",
   "BasePath": "_content/StoreApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StoreApi/wwwroot",
+      "Source": "StoreApi",
+      "ContentRoot": "/Users/seymurfahradov/Desktop/StoreApp/StoreApi/wwwroot/",
+      "BasePath": "_content/StoreApi",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

@@ -9,6 +9,7 @@ namespace StoreApi.Admin.Dtos.ProductDtos
         public decimal CostPrice { get; set; }
         public decimal DiscountPercent { get; set; }
         public decimal DiscountedPrice { get; set; }
+        public string ImageUrl { get; set; }
         public CategoryInProductDetailDto Category { get; set; }
 
     }

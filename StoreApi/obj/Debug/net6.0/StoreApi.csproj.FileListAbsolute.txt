@@ -79,3 +79,6 @@
 /Users/seymurfahradov/Desktop/StoreApp/StoreApi/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /Users/seymurfahradov/Desktop/StoreApp/StoreApi/bin/Debug/net6.0/Microsoft.Extensions.Identity.Core.dll
 /Users/seymurfahradov/Desktop/StoreApp/StoreApi/bin/Debug/net6.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/seymurfahradov/Desktop/StoreApp/StoreApi/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/seymurfahradov/Desktop/StoreApp/StoreApi/bin/Debug/net6.0/MicroElements.Swashbuckle.FluentValidation.dll
+/Users/seymurfahradov/Desktop/StoreApp/StoreApi/bin/Debug/net6.0/StoreApi.staticwebassets.runtime.json

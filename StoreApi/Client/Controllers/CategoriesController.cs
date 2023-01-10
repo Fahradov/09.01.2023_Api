@@ -11,13 +11,14 @@ using StoreApi.Client.Dtos.CategoryDtos;
 
 namespace StoreApi.Client.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName ="users")]
+    [Route("api/users/[controller]")]
     [ApiController]
-    public class ClientCategoriesController : Controller
+    public class CategoriesController : Controller
     {
         private readonly StoreDbContext _context;
         private readonly IMapper _mapper;
-        public ClientCategoriesController(StoreDbContext context,IMapper mapper)
+        public CategoriesController(StoreDbContext context,IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

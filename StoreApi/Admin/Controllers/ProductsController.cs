@@ -1,30 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Store.Core.Entities;
 using Store.Data.DAL;
 using StoreApi.Admin.Dtos.CategoryDtos;
 using StoreApi.Admin.Dtos.ProductDtos;
+using StoreApi.Helpers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace StoreApi.Admin.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName = "admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
+    [Route("api/admin/[controller]")]
     [ApiController]
     public class ProductsController : Controller
     {
         private readonly StoreDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _env;
 
-        public ProductsController(StoreDbContext context,IMapper mapper)
+        public ProductsController(StoreDbContext context,IMapper mapper,IWebHostEnvironment env)
         {
             _context = context;
             _mapper = mapper;
+            _env = env;
         }
 
         // GET api/values/5
@@ -66,6 +73,7 @@ namespace StoreApi.Admin.Controllers
 
 
             Product product = _mapper.Map<Product>(postDto);
+            product.Image = FileManager.Save(postDto.ImageFile, _env.WebRootPath, "uploads/products");
 
             _context.Products.Add(product);
             _context.SaveChanges();
