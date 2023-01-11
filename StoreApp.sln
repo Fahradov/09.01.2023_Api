@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Data", "Store.Data\St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Core", "Store.Core\Store.Core.csproj", "{C3D62600-2B30-4AC6-828A-E14E58F53618}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreAdminUI", "StoreAdminUI\StoreAdminUI.csproj", "{A3A56A0D-DB22-4DF5-B577-02E7EDDB08E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,13 +22,17 @@ Global
 		{3B8FAA9B-D04A-41F2-98E1-546B16EFA302}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B8FAA9B-D04A-41F2-98E1-546B16EFA302}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6FA043E8-C5CD-49D0-A49A-E29835155B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FA043E8-C5CD-49D0-A49A-E29835155B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FA043E8-C5CD-49D0-A49A-E29835155B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FA043E8-C5CD-49D0-A49A-E29835155B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA043E8-C5CD-49D0-A49A-E29835155B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3D62600-2B30-4AC6-828A-E14E58F53618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3D62600-2B30-4AC6-828A-E14E58F53618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3D62600-2B30-4AC6-828A-E14E58F53618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3D62600-2B30-4AC6-828A-E14E58F53618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D62600-2B30-4AC6-828A-E14E58F53618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A56A0D-DB22-4DF5-B577-02E7EDDB08E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A56A0D-DB22-4DF5-B577-02E7EDDB08E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A56A0D-DB22-4DF5-B577-02E7EDDB08E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A56A0D-DB22-4DF5-B577-02E7EDDB08E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

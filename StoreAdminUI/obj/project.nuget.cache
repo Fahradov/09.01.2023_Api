@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "k/jl5spdDPRemdYWFE+UkyAZGfH88Xw+p8CwXcIj+tdppccjuxPTmES2v5hLbk0Op+AfjNq5vadkjyfmX3AOxg==",
+  "success": true,
+  "projectFilePath": "/Users/seymurfahradov/Desktop/StoreApp/StoreAdminUI/StoreAdminUI.csproj",
+  "expectedPackageFiles": [
+    "/Users/seymurfahradov/.nuget/packages/microsoft.aspnetcore.jsonpatch/6.0.13/microsoft.aspnetcore.jsonpatch.6.0.13.nupkg.sha512",
+    "/Users/seymurfahradov/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/6.0.13/microsoft.aspnetcore.mvc.newtonsoftjson.6.0.13.nupkg.sha512",
+    "/Users/seymurfahradov/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/seymurfahradov/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/seymurfahradov/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -7,7 +7,9 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Store.Core.Entities;
+using Store.Core.Repositories;
 using Store.Data.DAL;
+using StoreApi.Admin.Dtos;
 using StoreApi.Admin.Dtos.CategoryDtos;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,24 +17,24 @@ using StoreApi.Admin.Dtos.CategoryDtos;
 namespace StoreApi.Admin.Controllers
 {
     [ApiExplorerSettings(GroupName = "admin")]
-    [Authorize(Roles = "SuperAdmin,Admin")]
+    //[Authorize(Roles = "SuperAdmin,Admin")]
     [Route("api/admin/[controller]")]
     [ApiController]
     public class CategoriesController : Controller
     {
-        public readonly StoreDbContext _context;
+        public readonly ICategoryRepository _catRep;
         public readonly IMapper _mapper;
-        public CategoriesController(StoreDbContext context,IMapper mapper)
+        public CategoriesController(IMapper mapper,ICategoryRepository catRep)
         {
-            _context = context;
+            _catRep = catRep;
             _mapper = mapper;
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            var category = _context.Categories.FirstOrDefault(x => x.Id == id);
+            var category =await _catRep.GetAsync(x => x.Id == id);
 
             if (category == null)
                 return NotFound();
@@ -47,58 +49,67 @@ namespace StoreApi.Admin.Controllers
 
         public IActionResult GetAll(int page = 1)
         {
-            var categories = _context.Categories.Skip((page - 1) * 4).Take(4).ToList();
+            var query = _catRep.GetAll(x => true);
 
-            var listItems = _mapper.Map<List<CategoryListItemDto>>(categories);
+            var categoryDtos = _mapper.Map<List<CategoryListItemDto>>(query.Skip((page - 1) * 4).Take(4).ToList());
+
+            PaginatedListDto<CategoryListItemDto> listItems =
+                new PaginatedListDto<CategoryListItemDto>(categoryDtos, page, 4, query.Count());
 
             return Ok(listItems);
+        } 
 
+        [HttpGet("all")]
+        public IActionResult GetAll()
+        {
+            List<CategoryListItemDto> listItemDtos = _mapper.Map<List<CategoryListItemDto>>(_catRep.GetAll(x=>true).ToList());
+            return Ok(listItemDtos);
         }
 
         // POST api/values
         [HttpPost("")]
-        public IActionResult Create(CategoryPostDto postDto)
+        public async Task<IActionResult> Create(CategoryPostDto postDto)
         {
-            if (_context.Categories.Any(x => x.Name == postDto.Name))
+            if (await _catRep.IsExistAsync(x => x.Name == postDto.Name))
                 return BadRequest();
 
             Category category = _mapper.Map<Category>(postDto);
 
-            _context.Categories.Add(category);
-            _context.SaveChanges();
+            await _catRep.AddAsync(category);
+            await _catRep.CommitAsync();
 
             return Created("",category);
         }
 
         //// PUT api/values/5
         [HttpPut("{id}")]
-        public IActionResult Update(int id,CategoryPostDto postDto)
+        public async Task<IActionResult> Update(int id,CategoryPostDto postDto)
         {
-            var category = _context.Categories.FirstOrDefault(x => x.Id == id);
+            var category =await _catRep.GetAsync(x => x.Id == id);
 
             if (category == null)
                 return NotFound();
 
-            if (_context.Categories.Any(x => x.Id != id && x.Name == postDto.Name))
+            if (await _catRep.IsExistAsync(x => x.Id != id && x.Name == postDto.Name))
                 return BadRequest(new { error = new { field = "Name", message = "Name already exists!" } });
 
             category.Name = postDto.Name;
-            _context.SaveChanges();
+            _catRep.Commit();
 
             return Ok();
         }
 
         //// DELETE api/values/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var category = _context.Categories.FirstOrDefault(x => x.Id == id);
+            var category = await _catRep.GetAsync(x => x.Id == id);
 
             if (category == null)
                 return NotFound();
 
-            _context.Categories.Remove(category);
-            _context.SaveChanges();
+            _catRep.Remove(category);
+            _catRep.Commit();
 
             return Ok();
         }

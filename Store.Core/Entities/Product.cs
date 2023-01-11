@@ -9,6 +9,7 @@ namespace Store.Core.Entities
         public decimal CostPrice { get; set; }
         public decimal DiscountPercent { get; set; }
 		public string? Image { get; set; }
+		public bool IsDeleted { get; set; }
 		public Category Category { get; set; }
     }
 }

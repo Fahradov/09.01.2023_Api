@@ -38,6 +38,9 @@
     <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
     <None Remove="MicroElements.Swashbuckle.FluentValidation" />
     <None Remove="Helpers\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Interfaces\" />
+    <None Remove="Services\Implementations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
@@ -57,6 +60,9 @@
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\uploads\" />
     <Folder Include="wwwroot\uploads\products\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="Services\Implementations\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Store.Data\Store.Data.csproj">

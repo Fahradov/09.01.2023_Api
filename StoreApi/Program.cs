@@ -6,10 +6,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Store.Core.Entities;
+using Store.Core.Repositories;
 using Store.Data.DAL;
+using Store.Data.Repositories;
 using StoreApi.Admin.Dtos.CategoryDtos;
 using StoreApi.Admin.Profiles;
 using StoreApi.Client.Profiles;
+using StoreApi.Services;
+using StoreApi.Services.Implementations;
+using StoreApi.Services.Interfaces;
 using Swashbuckle.AspNetCore.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +28,13 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 }).AddDefaultTokenProviders().AddEntityFrameworkStores<StoreDbContext>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+
+
 builder.Services.AddSwaggerGen(opt =>
 {
     opt.SwaggerDoc("admin", new OpenApiInfo

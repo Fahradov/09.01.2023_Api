@@ -3,6 +3,7 @@ using AutoMapper;
 using Store.Core.Entities;
 using StoreApi.Admin.Dtos.CategoryDtos;
 using StoreApi.Admin.Dtos.ProductDtos;
+using StoreApi.Helpers;
 
 namespace StoreApi.Admin.Profiles
 {
@@ -23,7 +24,7 @@ namespace StoreApi.Admin.Profiles
 
 			CreateMap<Product, ProductDetailDto>()
 				.ForMember(x => x.DiscountedPrice, f => f.MapFrom(d => d.SalePrice * (100 - d.DiscountPercent) / 100))
-				.ForMember(x => x.ImageUrl, f => f.MapFrom(d => $"{_httpContext.HttpContext.Request.Scheme}://{_httpContext.HttpContext.Request.Host}{_httpContext.HttpContext.Request.PathBase}/uploads/products/{d.Image}"));
+				.ForMember(x => x.ImageUrl, f => f.MapFrom(d => $"{_httpContext.HttpContext.Request.BaseUrl()}/uploads/products/{d.Image}"));
 			CreateMap<Product, ProductListItemDto>()
 				.ForMember(x => x.DiscountedPrice, f => f.MapFrom(d => d.SalePrice * (100 - d.DiscountPercent) / 100));
 			CreateMap<Product, ProductPostDto>().ReverseMap();

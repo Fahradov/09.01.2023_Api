@@ -15,6 +15,7 @@ namespace Store.Data.DAL
 
 		public DbSet<Category> Categories { get; set; }
 		public DbSet<Product> Products { get; set; }
+		public DbSet<Slider> SLiders { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

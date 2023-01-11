@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Store.Core.Entities;
 using StoreApi.Admin.Dtos.AccountDtos;
+using StoreApi.Services;
+using StoreApi.Services.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -23,15 +25,18 @@ namespace StoreApi.Admin.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _config;
+        private readonly IJwtService _jwtServ;
 
-        public AccountsController(UserManager<AppUser> userManager,RoleManager<IdentityRole> roleManager,IConfiguration config)
+        public AccountsController(UserManager<AppUser> userManager,RoleManager<IdentityRole> roleManager,IConfiguration config,IJwtService jwtServ)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _config = config;
+            _jwtServ = jwtServ;
         }
 
         [HttpGet("roles")]
+
         public async Task<IActionResult> CreateRoles()
         {
             await _roleManager.CreateAsync(new IdentityRole("SuperAdmin"));
@@ -52,35 +57,15 @@ namespace StoreApi.Admin.Controllers
             if (!await _userManager.CheckPasswordAsync(user, loginDto.Password))
                 return BadRequest(new { error = new { field = "Password", message = "Password is incorrect!!!" } });
 
+            var roles =await  _userManager.GetRolesAsync(user);
 
-            List<Claim> claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name,user.UserName),
-                new Claim(ClaimTypes.NameIdentifier,user.Id),
-                new Claim("FullName",user.FullName),
-            };
 
-            var roles = await _userManager.GetRolesAsync(user);
-            var roleClaims = roles.Select(x => new Claim(ClaimTypes.Name,x));
-            claims.AddRange(roleClaims);
+            var token=_jwtServ.GenerateToken(user, roles, _config);
 
-            string secret = _config.GetSection("JWT:secret").Value;
+            
+            
 
-            var symmetricSecurityKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(secret));
-            var creds = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
-
-            JwtSecurityToken token = new JwtSecurityToken
-                (
-                claims:claims,
-                signingCredentials:creds,
-                expires:DateTime.UtcNow.AddHours(5),
-                issuer:_config.GetSection("JWT:issuer").Value,
-                audience:_config.GetSection("JWT:audience").Value
-                );
-
-            string tokenStr = new JwtSecurityTokenHandler().WriteToken(token);
-
-            return Ok(new {token=tokenStr});
+            return Ok(token);
         }
 
         //[HttpPost("createAdmin")]
