@@ -1,23 +1,20 @@
-﻿<Properties StartupConfiguration="{3B8FAA9B-D04A-41F2-98E1-546B16EFA302}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="StoreApi/Admin/Controllers/AccountsController.cs">
+﻿<Properties StartupConfiguration="StartUpProjects">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StoreAdminUI/Views/Category/Index.cshtml">
     <Files>
-      <File FileName="StoreAdminUI/Controllers/CategoryController.cs" Line="14" Column="37" />
-      <File FileName="StoreAdminUI/Views/Category/Index.cshtml" Line="5" Column="24" />
-      <File FileName="StoreApi/Admin/Controllers/AccountsController.cs" Line="11" Column="7" />
+      <File FileName="StoreAdminUI/Controllers/CategoryController.cs" Line="27" Column="17" />
+      <File FileName="StoreAdminUI/Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="StoreAdminUI/ViewModels/PaginatedCategoryVM.cs" Line="7" Column="12" />
+      <File FileName="StoreAdminUI/Views/Category/Index.cshtml" Line="6" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="StoreApp" expanded="True" selected="True">
+          <Node name="StoreApp" expanded="True">
             <Node name="StoreAdminUI" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Category" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="StoreApi" expanded="True">
-              <Node name="Admin" expanded="True">
-                <Node name="Controllers" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -29,14 +26,18 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint enabled="false" file="/Users/seymurfahradov/Desktop/StoreApp/StoreApi/Admin/Controllers/AccountsController.cs" relfile="StoreApi/Admin/Controllers/AccountsController.cs" line="79" column="1" />
+      <Breakpoint enabled="false" file="/Users/seymurfahradov/Desktop/StoreApp/StoreApi/Admin/Controllers/AccountsController.cs" relfile="StoreApi/Admin/Controllers/AccountsController.cs" line="80" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.StoreApi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MultiItemStartupConfigurations>
-    <MultiItemSolutionRunConfiguration Id="Store.APi" Name="Store.APi" />
-    <MultiItemSolutionRunConfiguration Id="StoreAdminUI" Name="StoreAdminUI" />
+    <MultiItemSolutionRunConfiguration Id="StartUpProjects" Name="StartUpProjects">
+      <Items>
+        <StartupItem ItemId="{A3A56A0D-DB22-4DF5-B577-02E7EDDB08E1}" ItemName="StoreAdminUI" ConfigurationId="Default" />
+        <StartupItem ItemId="{3B8FAA9B-D04A-41F2-98E1-546B16EFA302}" ItemName="StoreApi" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
   <Debugger.DebugSourceFolders />
-  <MonoDevelop.Ide.ItemProperties.StoreAdminUI FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.StoreAdminUI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>
